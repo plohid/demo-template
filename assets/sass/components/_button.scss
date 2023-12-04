@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.default-btn {
+    @extend %d-inline-block;
+    @include font-size(16px);
+    color: $black-color;
+    font-weight: 400;
+    transition: .3s cubic-bezier(.79, .14, .15, .86);
+    padding-inline: 1.125rem;
+    line-height: 3rem;
+    font-family: $title-font;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background: $theme-color;
+    line-height: 40px;
+
+    @include breakpoint(lg) {
+        line-height: 60px;
+        padding-inline: 2.125rem;
+    }
+
+    span {
+        color: $black-color;
+    }
+
+    &:hover {
+        background-color: darken($theme-color, $amount: 10);
+    }
+}
+
+.text-btn {
+    @include font-size(14px);
+    font-family: $title-font;
+    color: $btn-text;
+    text-transform: uppercase;
+
+
+    &:hover {
+        color: $white-color;
+    }
+}
+
+button {
+    outline: none;
+    border: none;
+}

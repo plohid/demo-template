@@ -1,0 +1,24 @@
+.feature {
+    @extend %hidden;
+
+    &__item {
+        &-inner {
+            @extend %text-center;
+        }
+
+        &-thumb {
+            @extend %mb-25;
+        }
+
+        &-content {
+            h5 {
+                @extend %mb-15;
+            }
+
+            p {
+                max-inline-size: 30ch;
+                margin-inline: auto;
+            }
+        }
+    }
+}

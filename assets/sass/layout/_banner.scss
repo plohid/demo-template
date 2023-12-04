@@ -1,0 +1,142 @@
+//============================================
+// * Banner sectin start here
+//============================================
+
+.banner {
+    @extend %hidden;
+    background-size: cover;
+    padding-block-start: 170px;
+    padding-block-end: 120px;
+
+
+    @include breakpoint(lg) {
+        padding-block-start: 240px;
+        padding-block-end: 150px;
+    }
+
+    &__thumb {
+        img {
+            @include breakpoint(xxl) {
+                max-width: 100%;
+            }
+        }
+    }
+
+
+    &__content {
+        h2 {
+            @extend %m-0;
+            @extend %mb-10;
+            max-inline-size: 20ch;
+        }
+
+        p {
+            @extend %mb-50;
+            // @extend %pr-30;
+            line-height: 30px;
+            max-inline-size: 35ch;
+            text-transform: capitalize;
+
+            @include breakpoint(lg) {
+                max-inline-size: 45ch;
+            }
+        }
+    }
+}
+
+.tech {
+    &__list {
+        @extend %flex,
+        %align-items-center;
+        gap: 10px;
+    }
+}
+
+
+
+
+//=====banner home 2
+
+
+.banner-section {
+    background-size: cover;
+    background-position: center;
+    padding-block: 150px;
+
+    @include breakpoint(md) {
+        padding-block: 200px;
+    }
+}
+
+.banner-content {
+    @include breakpoint(xl) {
+        margin-bottom: -250px;
+    }
+
+    h1 {
+        @extend %m-0;
+        text-shadow: 1px 2px 2px $black-color,
+            3px 4px 0 $theme-color;
+
+    }
+
+    .default-button {
+        padding: 0 2rem;
+    }
+
+    p {
+        @include font-size(24px);
+        font-family: $text-font;
+        text-transform: uppercase;
+        @extend %mb-30;
+    }
+}
+
+.banner-thumb {
+    @include breakpoint(max-sm) {
+        padding: 50px 0;
+    }
+
+
+    .banner-thumb-img {
+        animation: rotating 15s linear infinite;
+
+
+        @include breakpoint(max-lg) {
+            width: 35%;
+        }
+    }
+}
+
+
+//============================================
+// * pageheader sectin start here
+//============================================
+
+
+.pageheader-section {
+    padding-block: 70px;
+    background-size: cover;
+    background-position: center;
+
+    @include breakpoint(xl) {
+        padding-block: 150px;
+    }
+
+    .pageheader-title {
+        @include font-size(48px);
+        @extend %text-clamp-1;
+    }
+
+    .breadcrumb {
+        li {
+            a {
+                @extend %white-color;
+            }
+
+            &.active {
+                @extend %white-color;
+            }
+        }
+    }
+}
